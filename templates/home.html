@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load fontawesome_5 %}
+{% fontawesome_5_static %}
+{% block content %}.
+    <div class="mt-4 p-5 bg-secondary text-white rounded">
+        <h1 class="text-end">
+            <i class="fas fa-smile-wink" style="color: yellow"></i>
+            <i class="fas fa-smile-wink" style="color: yellow"></i>
+            Welcome to
+            <i class="fas fa-smile-wink" style="color: yellow"></i>
+            <i class="fas fa-smile-wink" style="color: yellow"></i>
+            <br>
+            DigiTech Technology and Service Co., Ltd.
+        </h1> <br>
+        <h2 class="text-center text-warning">We help your company to best
+            digital business of future </h2>
+        <p class="text-center">
+            <b>Our company help you to up performance to best company, </b>
+            we provide many service for transform your company <br>
+            to digital business with software, technology, network, <br>
+            data system to business intelligence
+        </p>
+    </div>
+    <div class="text-center">
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-grow text-warning"></div>
+        <div class="spinner-grow text-info"></div>
+        <div class="spinner-grow text-danger"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-border text-primary"></div>
+    </div>
+    <div class="row text">
+        <div class="col-lg-4">
+            <img src="{% static 'images/hny1.jpg' %}"
+                 class="img-thumbnail">
+        </div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/hny1.jpg' %}"
+                 class="img-thumbnail">
+        </div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/hny1.jpg' %}"
+                 class="img-thumbnail">
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+ <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+{% block content %}
+    <H1>This is Test Bootstrap </H1>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>สำเร็จ!</strong>
+                ท่านลงเบียนบัญชีผู้ใช้ระบบเรียบร้อยแล้ว
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <br>
+    <div class="alert alert-danger">
+        <strong>ผิดพลาด!</strong>
+        สินค้าที่เลือกหมดจากคลัง ไม่สามารถสั่งซื้อได้!!!
+    </div> <br>
+    <span class="badge bg-primary">Primary</span>
+    <span class="badge bg-secondary">Secondary</span> <br><br>
+    <span class="badge rounded-pill bg-info">Info</span>
+    <span class="badge rounded-pill bg-success">     Light      </span>
+    <br><br>
+    <div class="progress" style="height: 50px;">
+        <div class="progress-bar bg-success" style="width:80%; height: 50px">80%</div>
+    </div>
+    <p class="text-danger">
+        002 Mouse Acer ราคา 500 บาท
+        <a href="" data-bs-toggle="collapse" data-bs-target="#pro001">ดูรายละเอียด...</a>
+    </p>
+    <div id="pro001" class="collapse">
+        Sensor : HERO 25K <br>
+        Resolution : 100 - 25,600 DPI <br>
+        Polling Rate : - Hz <br>
+        Game type : FPS / MMORPG / MOBA / RTS <br>
+        Software : None (with on-board memory shotcuts) <br>
+        Switching : Hybrid Optical Mechanical Switches <br>
+        Total Buttons : 13 <br>
+        Interface : Wireless <br>
+        Battery : 140 hours on a single charge <br>
+        Cable Length : USB-C to USB-A Charging Cable <br>
+        Dimension : 131.4(L) x 79.2(W) x 41.1(H) mm <br>
+        Weight : 102G <br>
+    </div> <br>
+    <p class="text-danger">
+        003 Mouse Sumsang ราคา 1,500 บาท
+        <a href="" data-bs-toggle="collapse" data-bs-target="#pro002">ดูรายละเอียด...</a>
+    </p>
+    <div id="pro002" class="collapse">
+        Sensor : Instant 603EP <br>
+        Resolution : 3600 DPI <br>
+        Polling Rate : 125<br>
+        Game type : FPS / MMORPG / MOBA / RTS <br>
+        Software : - <br>
+        Total Buttons : 6 <br>
+        Switching : 3 million click switches <br>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary"
+            data-bs-toggle="modal" data-bs-target="#myModal" > เปิดหน้าต่าง
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal" data-bs-keyboard="false" data-bs-backdrop="static" >
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">ผิดพลาด!</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    ท่านป้อนข้อมูลไม่สมบูรณ์ กรุณาตรวจสอบและแก้ไขให้ถูกต้อง
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Hooray!">Hover</a>
+    <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hooray!">Hover</a>
+    <a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="Hooray!">Hover</a>
+    <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Hooray!">Hover</a>
+    <br>
+    <h3>Popover Positioning</h3>
+  <p>Click on the links to see the popover in action:</p>
+  <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Content" data-bs-trigger="focus">Top</a>
+  <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Content">Bottom</a>
+  <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Content">Left</a>
+  <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Content">Right</a>
+    <br><br><br><br>
+
+{% endblock %}
